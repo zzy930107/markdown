@@ -183,28 +183,28 @@ allEntries：true表示清除value中的全部缓存，默认为false
 4.通过注入缓存对象操作缓存信息，取出缓存对象 Cache，通过缓存对象进行取值/删除等操作
 例子如下：
    
-```
+```java
 
 	@Autowired
 	private CacheManager cacheManager;
-	
+
 	private static UserContextUtil userContextUtil;
-	
+
 	private static Cache cache;
-	
+
 	public void set CacheManager（CacheManager cacheManager）{
 	  this.cacheManager=CacheManager;
-	
+
 	}
-	
+
 	@PostConstruct
 	public void init(){
 	  userContextUtil=this;
 	  userContextUtil.cacheManager=this.cacheManager;
 	  cache=this.cacheManager.getCache
-	                              <!--此处为配置文件中自定义缓存桶名称--> 
+				      <!--此处为配置文件中自定义缓存桶名称--> 
 	 (H2018H4aDefaultCacheConstants.DEFAULT_CACHE_NAME);
-	
+
 	}
 ```
          
