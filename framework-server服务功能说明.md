@@ -23,7 +23,7 @@ Framework-server该项目作为统一的客户端后台支持，当用户登录�
   
 	<!--在modeIVersion下引入如下-->
 
-    <!-- 父级依赖  控制jar包版本号 -->
+        <!-- 父级依赖  控制jar包版本号 -->
 
 	<parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
@@ -32,10 +32,10 @@ Framework-server该项目作为统一的客户端后台支持，当用户登录�
 	</parent>
 
 
-    <!--在dependencies下引入如下-->
+        <!--在dependencies下引入如下-->
 
-    <!-- 引入framework-core 项目-->
-    <dependencie>
+        <!-- 引入framework-core 项目-->
+        <dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-core</artifactid>
 	</dependencie>
@@ -46,7 +46,7 @@ Framework-server该项目作为统一的客户端后台支持，当用户登录�
 	<artifactid>framework-auth-sdk</artifactid>
 	</dependencie>
 
-    <!-- 引入framework-data-mybatis 项目-->
+        <!-- 引入framework-data-mybatis 项目-->
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-data-mybatis</artifactid>
@@ -64,19 +64,19 @@ Framework-server该项目作为统一的客户端后台支持，当用户登录�
 	<artifactid>lombok</artifactid>
 	</dependencie>
 
-    <!--oracle 驱动-->
-    <dependencie>
+        <!--oracle 驱动-->
+        <dependencie>
 	<groupid>com.oracle.jdbc<groupid>
 	<artifactid>ojdbc8</artifactid>
 	</dependencie>
 
-    <!-- mysql驱动 -->
-    <dependencie>
+        <!-- mysql驱动 -->
+        <dependencie>
 	<groupid>mysql<groupid>
 	<artifactid>mysql-connector-java</artifactid>
 	</dependencie>
 
-    <!--阿里巴巴的数据库连接池 -->
+        <!--阿里巴巴的数据库连接池 -->
 	<dependencie>
 	<groupid>com.alibaba<groupid>
 	<artifactid>druid</artifactid>
