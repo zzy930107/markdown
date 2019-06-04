@@ -161,15 +161,15 @@ allEntries：true表示清除value中的全部缓存，默认为false
 
 例子如下：
 
-```
+```java
 
-	<!--清除掉UserCache中某个指定key的缓存-->    
+	//清除掉UserCache中某个指定key的缓存   
 	@CacheEvict(value="UserCache",key="'user:' + #userId")    
 	public void removeUser(User user) {    
 	    System.out.println("UserCache"+user.getUserId());    
 	}    
 	
-	<!--清除掉UserCache中全部的缓存-->    
+	//清除掉UserCache中全部的缓存   
 	@CacheEvict(value="UserCache", allEntries=true)    
 	public final void setReservedUsers(String[] reservedUsers) {    
 	   System.out.println("UserCache deleteall");    
@@ -183,7 +183,7 @@ allEntries：true表示清除value中的全部缓存，默认为false
 4.通过注入缓存对象操作缓存信息，取出缓存对象 Cache，通过缓存对象进行取值/删除等操作
 例子如下：
    
-```
+```java
 
 	@Autowired
 	private CacheManager cacheManager;
