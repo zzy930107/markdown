@@ -37,36 +37,36 @@ Framework-cache-sdk主要提供了ehcache作为本地缓存，它 是一个纯J
   
 	<!--在modeIVersion下引入如下-->
 
-    <!-- 父级依赖  控制jar包版本号 -->
-    <parent>
+        <!-- 父级依赖  控制jar包版本号 -->
+        <parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-parent</artifactid><!-- 要依赖的artifactid -->
 	<version>2.2.0-SNAPSHOT</version><!-- 父级的版本号 -->
 	</parent>
 
 
-    <!--在dependencies下引入如下-->
+        <!--在dependencies下引入如下-->
 
-    <!--引入框架核心 -->
-     <dependencie>
+        <!--引入框架核心 -->
+        <dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-core</artifactid><!-- 要依赖的artifactid -->
 	</dependencie>
 
-    <!--lombok -->
-    <dependencie>
+        <!--lombok -->
+        <dependencie>
 	<groupid>org.projectlombok<groupid>
 	<artifactid>lombok</artifactid>
 	</dependencie>
 
-    <!--启用spring缓存支持 -->
-    <dependencie>
+        <!--启用spring缓存支持 -->
+        <dependencie>
 	<groupid>org.springframework.boot<groupid>
 	<artifactid>spring-boot-starter-cache</artifactid>
 	</dependencie>
 
-    <!--启用EhCache作为本地缓存 -->
-    <dependencie>
+        <!--启用EhCache作为本地缓存 -->
+        <dependencie>
 	<groupid>net.sf.ehcache<groupid>
 	<artifactid>ehcache</artifactid>
 	</dependencie>
@@ -77,7 +77,7 @@ Framework-cache-sdk主要提供了ehcache作为本地缓存，它 是一个纯J
 
 ```xml
 
-    <!--数据源sdk-->  
+        <!--数据源sdk-->  
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-cache-sdk</artifactid>
@@ -101,15 +101,15 @@ h2018：
 
 3. yml参数配置说明：
 
-   maxElementsInMemory ： 内存缓存中最多可以存放的元素数量。 
+* maxElementsInMemory ： 内存缓存中最多可以存放的元素数量。 
 
-   memoryStoreEvictionPolicy :  内存存储与释放策略,即达到maxElementsInMemory限制时,Ehcache会根据指定策略清理内存  共有三种策略,分别为LRU(最近最少使用)、LFU(最常用的)、FIFO(先进先出)。
+* memoryStoreEvictionPolicy :  内存存储与释放策略,即达到maxElementsInMemory限制时,Ehcache会根据指定策略清理内存  共有三种策略,分别为LRU(最近最少使用)、LFU(最常用的)、FIFO(先进先出)。
 
-   timeToIdleSeconds :缓存数据在失效前的允许闲置时间(单位:秒),默认值是0表示可闲置时间无穷大,若超过这个时间没有访问此Cache中的某个元素,那么此元素将被从Cache中清除。
+* timeToIdleSeconds :缓存数据在失效前的允许闲置时间(单位:秒),默认值是0表示可闲置时间无穷大,若超过这个时间没有访问此Cache中的某个元素,那么此元素将被从Cache中清除。
 
-   timeToLiveSeconds :缓存数据的总的存活时间（单位：秒），从创建开始计时，失效结束。
+* timeToLiveSeconds :缓存数据的总的存活时间（单位：秒），从创建开始计时，失效结束。
 
-   diskExpiryThreadIntervalSecond : 磁盘缓存的清理线程运行间隔,默认是120秒。
+* diskExpiryThreadIntervalSecond : 磁盘缓存的清理线程运行间隔,默认是120秒。
 
 4. 在项目启动类前加上@EnableCaching注解；这样的话，启动类启动时会去启动缓存启动器。
  
@@ -180,7 +180,7 @@ allEntries：true表示清除value中的全部缓存，默认为false
   与@Cacheable不同，@CachePut不仅会缓存方法的结果，还会执行方法的代码段。它支持的属性和用法都与@Cacheable一致。
 
 
-4.通过注入缓存对象操作缓存信息，取出缓存对象 Cache，通过缓存对象进行取值/删除等操作
+6.通过注入缓存对象操作缓存信息，取出缓存对象 Cache，通过缓存对象进行取值/删除等操作
 例子如下：
    
 ```java
