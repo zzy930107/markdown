@@ -105,7 +105,7 @@ framework-exception-sdk是用来处理全局异常的，在继承标准异常后
 ``` 
 2. 定义自己的异常类及服务
 代码示例如下：
-```       
+```java       
      public class ParameterServiceException extends BaseException{
 	   private static final long   serialVersioUID = 7229576394568508735L;
 	   
@@ -118,7 +118,7 @@ framework-exception-sdk是用来处理全局异常的，在继承标准异常后
 ```  
 3. 定义自己的异常业务错误类型
 代码示例如下：
-```
+```java
 
 	public enum ParameterServiceError implements ErrorEnumInterface{
 	
