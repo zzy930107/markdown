@@ -141,8 +141,8 @@ condition：触发条件，只有满足条件的情况才会加入缓存，默�
 	}  
 	
 	
-	将缓存保存进UserCache中，并当参数userId的长度小于12时才保存进缓存，默认使用参数值及类型作为缓存的key
-	保存缓存需要指定key，value， value的数据类型，不指定key默认和参数名一样如："1"
+	//将缓存保存进UserCache中，并当参数userId的长度小于12时才保存进缓存，默认使用参数值及类型作为缓存的key
+	//保存缓存需要指定key，value， value的数据类型，不指定key默认和参数名一样如："1"
 	@Cacheable(value="UserCache", condition="#userId.length() < 12")    
 	public boolean isReserved(String userId) {    
 	    System.out.println("UserCache:"+userId);    
