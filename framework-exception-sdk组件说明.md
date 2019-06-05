@@ -57,7 +57,7 @@ framework-exception-sdk是用来处理全局异常的，在继承标准异常后
 ```
 	在modeIVersion下引入
 
-    <!--控制jar包版本号-->
+        <!--控制jar包版本号-->
 	<parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-parent</artifactid><!-- 要依赖的artifactid -->
@@ -97,7 +97,7 @@ framework-exception-sdk是用来处理全局异常的，在继承标准异常后
 
 ```xml
 
-    <!--异常sdk-->  
+        <!--异常sdk-->  
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-exception-sdk</artifactid>
