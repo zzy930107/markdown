@@ -35,42 +35,42 @@ HandleUserFilter：对cookie的一些异常处理，如权限异常、平台异�
   
 	<!--在modeIVersion下引入如下-->
    
-    <!-- 父级依赖  控制jar包版本号 -->
-    <parent>
+        <!-- 父级依赖  控制jar包版本号 -->
+        <parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>h2018-dependencies</artifactid><!-- 要依赖的artifactid -->
 	<version>2.2.0-SNAPSHOT</version><!-- 父级的版本号 -->
 	</parent>
 
 
-    <!--在dependencies下引入如下-->
+        <!--在dependencies下引入如下-->
 
-    <!--引入框架核心 -->
-    <dependencie>
+        <!--引入框架核心 -->
+        <dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-core</artifactid><!-- 要依赖的artifactid -->
 	</dependencie>
 
-    <!-- 引入framework-auth-sdk 项目-->
-    <dependencie>
-    <groupid>cn.gov.customs.h2018.framework<groupid>
-    <artifactid>framework-auth-sdk</artifactid>
-    </dependencie>
+        <!-- 引入framework-auth-sdk 项目-->
+        <dependencie>
+        <groupid>cn.gov.customs.h2018.framework<groupid>
+        <artifactid>framework-auth-sdk</artifactid>
+        </dependencie>
 
-    <!---zuul依赖 -->
-    <dependencie>
-    <groupid>org.springframework.cloud<groupid>
-    <artifactid>spring-cloud-starter-zuul</artifactid>
-    </dependencie>
+        <!---zuul依赖 -->
+        <dependencie>
+        <groupid>org.springframework.cloud<groupid>
+        <artifactid>spring-cloud-starter-zuul</artifactid>
+        </dependencie>
 
-    <!---feign依赖 -->
-    <dependencie>
+        <!---feign依赖 -->
+        <dependencie>
 	<groupid>org.springframework.cloud<groupid>
 	<artifactid>spring-cloud-starter-feign</artifactid>
 	</dependencie>
 
-    <!---jwt依赖 -->
-    <dependencie>
+        <!---jwt依赖 -->
+        <dependencie>
 	<groupid>org.springframework.security<groupid>
 	<artifactid>spring-security-jwtr</artifactid>
 	</dependencie>
@@ -89,15 +89,15 @@ Cookie.timeout 配置为cookie 失效时间
     
 4. 在项目启动类加上以下注解：
 ```
-    <!--- springboot必备注解 -->
+    //springboot必备注解 
 	@SpringCloudApplication
 
-    <!---开启zuul-->
+    //开启zuul
 	@EnableZuulProxy 
 
-    <!---让注册中心发现并扫描到该服务-->
+    //让注册中心发现并扫描到该服务
 	@EnableDiscoveryClient 
 
-    <!---调用其它微服务-->
+    //调用其它微服务
 	@EnableFeignClients 
 ```
