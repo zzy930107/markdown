@@ -26,7 +26,7 @@
 ```
 	在modeIVersion下引入
 
-    <!--控制jar包版本号-->
+        <!--控制jar包版本号-->
 	<parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-parent</artifactid><!-- 要依赖的artifactid -->
@@ -75,7 +75,7 @@
 
 ```xml
 
-    <!--分页组件-->  
+        <!--分页组件-->  
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-data-mybatis</artifactid>
@@ -97,11 +97,11 @@
 
 2.3：然后在Mapper.java中编写对应的接口：
   
-   public List<Doc> selectByPageAndSelections();
+   `public List<Doc> selectByPageAndSelections();`
 
 2.4：分页
 
-```
+```java
 
 	@Service
 	public class DocServiceImpl implements IDocService {
