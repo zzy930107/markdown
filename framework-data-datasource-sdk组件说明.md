@@ -42,7 +42,7 @@ Druid是阿里巴巴开源平台上一个数据库连接池实现，是 Java 的
   
 	在modeIVersion下引入:
 
-    <!--控制jar包版本号-->
+        <!--控制jar包版本号-->
 	<parent>
 	<groupid>cn.gov.customs.h2018.framework<groupid><!-- 父级的组id -->
 	<artifactid>framework-parent</artifactid><!-- 要依赖的artifactid -->
@@ -51,7 +51,7 @@ Druid是阿里巴巴开源平台上一个数据库连接池实现，是 Java 的
 
 	在dependencies下引入：
 
-    <!--处理全局异常的sdk组件-->
+        <!--处理全局异常的sdk组件-->
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-exception-sdk</artifactid>
@@ -107,7 +107,7 @@ Druid是阿里巴巴开源平台上一个数据库连接池实现，是 Java 的
 
 ```xml
 
-    <!--数据源sdk-->  
+        <!--数据源sdk-->  
 	<dependencie>
 	<groupid>cn.gov.customs.h2018.framework<groupid>
 	<artifactid>framework-data-datasource-sdk</artifactid>
