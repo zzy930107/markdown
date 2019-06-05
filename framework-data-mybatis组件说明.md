@@ -97,7 +97,10 @@
 
 2.3：然后在Mapper.java中编写对应的接口：
   
-   `public List<Doc> selectByPageAndSelections();`
+`java
+
+public List<Doc> selectByPageAndSelections();
+`
 
 2.4：分页
 
