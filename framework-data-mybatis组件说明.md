@@ -97,8 +97,7 @@
 
 2.3：然后在Mapper.java中编写对应的接口：
   
-`java
-
+`
 public List<Doc> selectByPageAndSelections();
 `
 
