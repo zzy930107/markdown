@@ -197,7 +197,9 @@ IndexOutOfBoundsException / NullPointerException，这类异常由程序员预�
 须使用“ 错误码” ；而应用内部推荐异常抛出；跨应用间 RPC 调用优先考虑使用 Result 方式，
 封装 isSuccess、 “ 错误码” 、 “ 错误简短信息” 。
 说明： 关于 RPC 方法返回方式使用 Result 方式的理由：
+
 1）使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。
+
 2）如果不加栈信息，只是 new 自定义异常，加入自己的理解的 error message，对于调用
 端解决问题的帮助不会太多。如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输
 的性能损耗也是问题。
@@ -207,10 +209,16 @@ IndexOutOfBoundsException / NullPointerException，这类异常由程序员预�
 的自定义异常，如： DaoException / ServiceException 等。
 
 13. 防止 NPE，是程序员的基本修养，注意 NPE 产生的场景：
+
 1） 返回类型为包装数据类型，有可能是 null，返回 int 值时注意判空
 反例： public int f(){ return Integer 对象}，如果为 null，自动解箱抛 NPE。
+
 2） 数据库的查询结果可能为 null。
+
 3） 集合里的元素即使 isNotEmpty，取出的数据元素也可能为 null。
+
 4） 远程调用返回对象，一律要求进行 NPE 判断。
+
 5） 对于 Session 中获取的数据，建议 NPE 检查，避免空指针。
-6） 级联调用 obj.getA().getB().getC()；一连串调用，易产生 NPE。（NPE常遇到，最好规避）
+
+6） 级联调用 obj.getA().getB().getC()；一连串调用，易产生 NPE。
