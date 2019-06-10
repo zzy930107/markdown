@@ -17,7 +17,7 @@ HandleCookieFilter：将ApigwConfig和H4AConfig注入其中，获取用户cookie
 
 HandleUserFilter：对cookie的一些异常处理，如权限异常、平台异常、其它异常等。
 
-8.通过jwt解决了跨域身份验证。
+6.通过jwt解决了跨域身份验证。
 
 
 ### Jwt跨域身份验证简单介绍：
@@ -89,15 +89,15 @@ Cookie.timeout 配置为cookie 失效时间
     
 4. 在项目启动类加上以下注解：
 ```
-    //springboot必备注解 
+          //springboot必备注解 
 	@SpringCloudApplication
 
-    //开启zuul
+           //开启zuul
 	@EnableZuulProxy 
 
-    //让注册中心发现并扫描到该服务
+           //让注册中心发现并扫描到该服务
 	@EnableDiscoveryClient 
 
-    //调用其它微服务
+         //调用其它微服务
 	@EnableFeignClients 
 ```
