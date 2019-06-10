@@ -92,6 +92,7 @@ aooId（应用标识）、appKey（应用key）、appSecret（应用密钥）需
 文件上传：错误，超链接引用无效
 其中 fileId 为文件上传时，会生成文件的唯一标识
 如果本地应用启动网关应用或者部署到开发环境调试，提供的 RestFul 地址如下：
+
 http：//ip:port/${spring.application.name}/hgfos/del{fileId}
 
 http：//ip:port/${spring.application.name}/hgfos/download{fileId}
@@ -118,7 +119,7 @@ Restful 接口方法：
 
 服务方法接口，类名：HgFosClientService
 
-| 方法名                           | 参数         | 返回值                  |                                                                                       
+| 方法名                           | 参数         | 返回值                  |                                                                                
 | ---------------------------------| -------------| ------------------------| 
 | delFile( String fileId )         | fileId       | HgFosInfo               |
 | downloadFile(String fileId )     | fileId       | ResponseEntity\<byte\[]>|                                                                                                                     
