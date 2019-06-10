@@ -126,7 +126,7 @@ spring：
     password:CONFIGUSER
 ```
 
-   2.2 配置需要读取的数据库：
+    2.2 配置需要读取的数据库：
 ```yml
 database：
   init-type：fromDb
@@ -135,7 +135,7 @@ database：
       metaDataName：hepsuser
 ```
 
-   2.3 从yml文件中读取连接信息：
+     2.3 从yml文件中读取连接信息：
 ```yml
 database：
   init-type：fromYml
