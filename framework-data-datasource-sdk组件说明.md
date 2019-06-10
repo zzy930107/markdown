@@ -116,7 +116,7 @@ Druid是阿里巴巴开源平台上一个数据库连接池实现，是 Java 的
 
 2. 打开 application.yml 文件进行配置：
 
-2.1 从数据库读取连接，配置配置库连接信息如下：
+   2.1 从数据库读取连接，配置配置库连接信息如下：
 ```yml
 spring：
   datasource：
@@ -126,7 +126,7 @@ spring：
     password:CONFIGUSER
 ```
 
-2.2 配置需要读取的数据库：
+   2.2 配置需要读取的数据库：
 ```yml
 database：
   init-type：fromDb
@@ -135,7 +135,7 @@ database：
       metaDataName：hepsuser
 ```
 
-2.3 从yml文件中读取连接信息：
+   2.3 从yml文件中读取连接信息：
 ```yml
 database：
   init-type：fromYml
