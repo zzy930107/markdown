@@ -6,19 +6,19 @@ Framework-core组件是所有服务类项目必须依赖该模块，是所有项
 ## 基于原理：
 1. 封装了4个核心 util 工具类：
 
-1.2 ConvertUtil 工具类对数据进行了分页及排序处理，pageNumber 为当前页，默认是第一页，pageSize 为当前页的数据条数，每页默认15条，根据 properties 字段对数据进行排序。
+    1.2 ConvertUtil 工具类对数据进行了分页及排序处理，pageNumber 为当前页，默认是第一页，pageSize 为当前页的数据条数，每页默认15条，根据 properties 字段对数据进行排序。
 
-1.3 EnumNameHelper 工具类为枚举操作类。
+    1.3 EnumNameHelper 工具类为枚举操作类。
 
-1.4 TypeNameHelper 工具类返回类型的常量的顺序，返回包含这些常量的数组。
+    1.4 TypeNameHelper 工具类返回类型的常量的顺序，返回包含这些常量的数组。
 
-1.5 XmlHelper 根据 Vue的组件框Element 获取它的节点名称、节点父类接默认值。
+    1.5 XmlHelper 根据 Vue的组件框Element 获取它的节点名称、节点父类接默认值。
 
 2. 封装了两个用户工具类：
 
-2.1 UserContextHolder 利用线程池来获取用户上下文。
+    2.1 UserContextHolder 利用线程池来获取用户上下文。
 
-2.2 UserHttpConvertUtil 通过 HttpServletRequest 获取用户的信息并通过 Base64 进行数据传递。
+    2.2 UserHttpConvertUtil 通过 HttpServletRequest 获取用户的信息并通过 Base64 进行数据传递。
 
 3. 使用 HttpClient线程池来处理大量并发发起的http消息。
 
