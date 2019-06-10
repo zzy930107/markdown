@@ -16,9 +16,9 @@ Framework-core组件是所有服务类项目必须依赖该模块，是所有项
 
 2. 封装了两个用户工具类：
 
-2.3 UserContextHolder 利用线程池来获取用户上下文。
+2.1 UserContextHolder 利用线程池来获取用户上下文。
 
-2.4 UserHttpConvertUtil 通过 HttpServletRequest 获取用户的信息并通过 Base64 进行数据传递。
+2.2 UserHttpConvertUtil 通过 HttpServletRequest 获取用户的信息并通过 Base64 进行数据传递。
 
 3. 使用 HttpClient线程池来处理大量并发发起的http消息。
 
