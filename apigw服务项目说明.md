@@ -8,7 +8,7 @@ apigw基于springcloud 的zuul实现单点登录，获取用户的基础信息�
 ## 基于原理：
 1. 基于 zuulfilter 实现，所有请求在网关流转结束后，按照需求转发至后台服务。    
 2. 基于单点登录  统一认证原则 将 H4A 无缝接入。     
-3. 基于https 协议，通过 head 头透传用户信息，在web 端通过cookie 设置失效。
+3. 基于http 协议，通过 head 头透传用户信息，在web 端通过cookie 设置失效。
 4. 该项目依赖了framework-core和framework-auth-sdk 两个项目共同完成了用户的认证 鉴权 熔断 负载均衡等功能。
 5. 定义了HandleUserFilter、HandleCookieFilter、HandleErrorFilter三个filter：
 HandleUserFilter：将UserService和H4AConfig注入其中，获取用户的token来判断用户登录的权限，如是否为白名单、上下文是否为空、处理视图等功能，通过feign去调用其它服务。
