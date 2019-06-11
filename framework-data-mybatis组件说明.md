@@ -86,6 +86,7 @@
 4. @RequestBody 接收分页查询对象封装Pageable
 5. 分页插件 PageHelper 拦截：PageHelper.startPage(page,size,sort);
 6. 返回 spring-data 的 PageImpl
+
 7.使用PageHelper的小例子及配置：
 
    7.1：编写mapper.xml文件
