@@ -2,7 +2,7 @@
 
 ## 该组件功能说明：
 
-framework-exception-sdk是用来处理全局异常的，在继承标准异常后，可以对抛出的异常进行统一处理，包含后台本地异常处理、 远程调用异常处理、前端异常处理等。业务系统通过继承和使用平台定义的异常类（BaseException、ArgumentException、BusinessException、PermissionException），对外抛出异常。平台根据异常类型自动捕获异常信息，并向业务服务调用者返回统一的响应对象 BaseException。
+framework-exception-sdk是用来处理统一异常的，在继承标准异常后，可以对抛出的异常进行统一处理，包含后台本地异常处理、 远程调用异常处理、前端异常处理等。业务系统通过继承和使用平台定义的异常类（BaseException、ArgumentException、BusinessException、PermissionException），对外抛出异常。平台根据异常类型自动捕获异常信息，并向业务服务调用者返回统一的响应对象 BaseException。
 
 | 属性名称          | 属性中文说明       |
 |-------------------|--------------------|
