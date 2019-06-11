@@ -81,9 +81,14 @@
 	<artifactid>framework-data-mybatis</artifactid>
 	</dependencie>   
 ``` 
-2.使用PageHelper的小例子及配置：
+2. 定义分页查询 pojo 继承 PageQuery 对象
+3. 定义 mybatis 的mapper
+4. @RequestBody 接收分页查询对象封装Pageable
+5. 分页插件 PageHelper 拦截：PageHelper.startPage(page,size,sort);
+6. 返回 spring-data 的 PageImpl
+7.使用PageHelper的小例子及配置：
 
-2.2：编写mapper.xml文件
+   7.1：编写mapper.xml文件
  
   测试工程就不复杂了，简单的查询一个表，没有条件
 ```
@@ -95,13 +100,13 @@
 	</select>
 ```
 
-2.3：然后在Mapper.java中编写对应的接口：
+   7.2：然后在Mapper.java中编写对应的接口：
   
 `
 public List<Doc> selectByPageAndSelections();
 `
 
-2.4：分页
+   7.3：分页
 
 ```java
 
@@ -121,3 +126,24 @@ public List<Doc> selectByPageAndSelections();
 ```
 以上只是一个简单的例子介绍
 
+
+### 备注说明
+1. page 默认值1，size 默认值5
+2. cn.gov.customs.h2018.tmc.ert.pojo.EntryRiskTagQuery.java
+3. cn.gov.customs.h2018.tmc.ert.service.impl.EntryRiskTagServiceImpl.java
+4. resource/mapper/EntryRiskTagDao.xml中selectEntryRiskTag
+
+
+#### buildPageable说明
+
+```java
+ //pageNumber：页码，从第一页开始
+ //pageSize：当前页记录数，默认 DEFAULT_PAGE_SIZE=15
+ //direction：排序方式/排序内容（desc，asc）
+ //properties：排序字段（多个逗号分隔）
+public static Pageable buildPageable （int pageNumber，int pageSize）；
+
+public static Pageable buildPageable （int pageNumber，int pageSize，String   properties）；
+
+public static Pageable buildPageable （int pageNumber，int pageSize，String   properties，String direction）；
+```
